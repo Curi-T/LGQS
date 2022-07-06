@@ -1,0 +1,1026 @@
+<!doctype html>
+<html style='font-size:18px !important'>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+
+<link href='https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap' rel='stylesheet' type='text/css' /><link href='https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@500&display=swap' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
+.mac-os-11 { --title-bar-height:28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background: inherit; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex:2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) {
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) {
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.42857rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ""; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left: 28px solid transparent; border-right: 28px solid transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ""; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right: 8px solid transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+.md-inline-math-container mjx-container { zoom: 0.95; }
+
+
+.CodeMirror { height: auto; }
+.CodeMirror.cm-s-inner { background: inherit; }
+.CodeMirror-scroll { overflow: auto hidden; z-index: 3; }
+.CodeMirror-gutter-filler, .CodeMirror-scrollbar-filler { background-color: rgb(255, 255, 255); }
+.CodeMirror-gutters { border-right: 1px solid rgb(221, 221, 221); background: inherit; white-space: nowrap; }
+.CodeMirror-linenumber { padding: 0px 3px 0px 5px; text-align: right; color: rgb(153, 153, 153); }
+.cm-s-inner .cm-keyword { color: rgb(119, 0, 136); }
+.cm-s-inner .cm-atom, .cm-s-inner.cm-atom { color: rgb(34, 17, 153); }
+.cm-s-inner .cm-number { color: rgb(17, 102, 68); }
+.cm-s-inner .cm-def { color: rgb(0, 0, 255); }
+.cm-s-inner .cm-variable { color: rgb(0, 0, 0); }
+.cm-s-inner .cm-variable-2 { color: rgb(0, 85, 170); }
+.cm-s-inner .cm-variable-3 { color: rgb(0, 136, 85); }
+.cm-s-inner .cm-string { color: rgb(170, 17, 17); }
+.cm-s-inner .cm-property { color: rgb(0, 0, 0); }
+.cm-s-inner .cm-operator { color: rgb(152, 26, 26); }
+.cm-s-inner .cm-comment, .cm-s-inner.cm-comment { color: rgb(170, 85, 0); }
+.cm-s-inner .cm-string-2 { color: rgb(255, 85, 0); }
+.cm-s-inner .cm-meta { color: rgb(85, 85, 85); }
+.cm-s-inner .cm-qualifier { color: rgb(85, 85, 85); }
+.cm-s-inner .cm-builtin { color: rgb(51, 0, 170); }
+.cm-s-inner .cm-bracket { color: rgb(153, 153, 119); }
+.cm-s-inner .cm-tag { color: rgb(17, 119, 0); }
+.cm-s-inner .cm-attribute { color: rgb(0, 0, 204); }
+.cm-s-inner .cm-header, .cm-s-inner.cm-header { color: rgb(0, 0, 255); }
+.cm-s-inner .cm-quote, .cm-s-inner.cm-quote { color: rgb(0, 153, 0); }
+.cm-s-inner .cm-hr, .cm-s-inner.cm-hr { color: rgb(153, 153, 153); }
+.cm-s-inner .cm-link, .cm-s-inner.cm-link { color: rgb(0, 0, 204); }
+.cm-negative { color: rgb(221, 68, 68); }
+.cm-positive { color: rgb(34, 153, 34); }
+.cm-header, .cm-strong { font-weight: 700; }
+.cm-del { text-decoration: line-through; }
+.cm-em { font-style: italic; }
+.cm-link { text-decoration: underline; }
+.cm-error { color: red; }
+.cm-invalidchar { color: red; }
+.cm-constant { color: rgb(38, 139, 210); }
+.cm-defined { color: rgb(181, 137, 0); }
+div.CodeMirror span.CodeMirror-matchingbracket { color: rgb(0, 255, 0); }
+div.CodeMirror span.CodeMirror-nonmatchingbracket { color: rgb(255, 34, 34); }
+.cm-s-inner .CodeMirror-activeline-background { background: inherit; }
+.CodeMirror { position: relative; overflow: hidden; }
+.CodeMirror-scroll { height: 100%; outline: 0px; position: relative; box-sizing: content-box; background: inherit; }
+.CodeMirror-sizer { position: relative; }
+.CodeMirror-gutter-filler, .CodeMirror-hscrollbar, .CodeMirror-scrollbar-filler, .CodeMirror-vscrollbar { position: absolute; z-index: 6; display: none; outline: 0px; }
+.CodeMirror-vscrollbar { right: 0px; top: 0px; overflow: hidden; }
+.CodeMirror-hscrollbar { bottom: 0px; left: 0px; overflow: auto hidden; }
+.CodeMirror-scrollbar-filler { right: 0px; bottom: 0px; }
+.CodeMirror-gutter-filler { left: 0px; bottom: 0px; }
+.CodeMirror-gutters { position: absolute; left: 0px; top: 0px; padding-bottom: 10px; z-index: 3; overflow-y: hidden; }
+.CodeMirror-gutter { white-space: normal; height: 100%; box-sizing: content-box; padding-bottom: 30px; margin-bottom: -32px; display: inline-block; }
+.CodeMirror-gutter-wrapper { position: absolute; z-index: 4; background: 0px 0px !important; border: none !important; }
+.CodeMirror-gutter-background { position: absolute; top: 0px; bottom: 0px; z-index: 4; }
+.CodeMirror-gutter-elt { position: absolute; cursor: default; z-index: 4; }
+.CodeMirror-lines { cursor: text; }
+.CodeMirror pre { border-radius: 0px; border-width: 0px; background: 0px 0px; font-family: inherit; font-size: inherit; margin: 0px; white-space: pre; overflow-wrap: normal; color: inherit; z-index: 2; position: relative; overflow: visible; }
+.CodeMirror-wrap pre { overflow-wrap: break-word; white-space: pre-wrap; word-break: normal; }
+.CodeMirror-code pre { border-right: 30px solid transparent; width: fit-content; }
+.CodeMirror-wrap .CodeMirror-code pre { border-right: none; width: auto; }
+.CodeMirror-linebackground { position: absolute; inset: 0px; z-index: 0; }
+.CodeMirror-linewidget { position: relative; z-index: 2; overflow: auto; }
+.CodeMirror-wrap .CodeMirror-scroll { overflow-x: hidden; }
+.CodeMirror-measure { position: absolute; width: 100%; height: 0px; overflow: hidden; visibility: hidden; }
+.CodeMirror-measure pre { position: static; }
+.CodeMirror div.CodeMirror-cursor { position: absolute; visibility: hidden; border-right: none; width: 0px; }
+.CodeMirror div.CodeMirror-cursor { visibility: hidden; }
+.CodeMirror-focused div.CodeMirror-cursor { visibility: inherit; }
+.cm-searching { background: rgba(255, 255, 0, 0.4); }
+span.cm-underlined { text-decoration: underline; }
+span.cm-strikethrough { text-decoration: line-through; }
+.cm-tw-syntaxerror { color: rgb(255, 255, 255); background-color: rgb(153, 0, 0); }
+.cm-tw-deleted { text-decoration: line-through; }
+.cm-tw-header5 { font-weight: 700; }
+.cm-tw-listitem:first-child { padding-left: 10px; }
+.cm-tw-box { border-style: solid; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-color: inherit; border-top-width: 0px !important; }
+.cm-tw-underline { text-decoration: underline; }
+@media print {
+  .CodeMirror div.CodeMirror-cursor { visibility: hidden; }
+}
+
+
+/* 基于 rainbow 主题 */
+/*
+fonts initalization
+*/
+@import url(https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@500&display=swap);
+
+@page {
+	size: A4;
+	margin: 8mm 0mm;
+}
+
+/*
+root variables including colors, font-familys and a shadow style
+*/
+:root {
+	--bg-color: #f3f2ee;
+	--font--family: "宋体", "思源黑体 CN", "微软雅黑";
+	--monospace-font: "Source Code Pro Regular", "Source Code Pro", monospace;
+	--font--family-h1: "方正楷体_GBK", "微软雅黑";
+	--font--family-h2: "华康手札体W5P", "微软雅黑";
+
+	--color--h2--quote: #2d7d59;
+	/* 二级标题背景颜色、引用侧边颜色*/
+	--color--quote--backgroudn: rgba(66, 185, 131, 0.1);
+	/*引用背景颜色*/
+	--color--h--focus: #ff5d52;
+	/* 标题点击后的前缀提示颜色 */
+
+	--color--inlinecode--font: #D83B64;
+	/*行内代码字体颜色*/
+	--color--inlinecode--background: #f9f2f4;
+	/*行内代码背景2颜色*/
+	--color--url: #659ddc;
+	/*超链接字体颜色*/
+	--color--url--focus: #f60;
+	/*选中的超链接后的填充颜色*/
+	--color--url--focus--font: #ffffffe6;
+	/*选中的超链接后的字体颜色*/
+	--color--highlight: #ffff00;
+	/*高亮颜色*/
+	--del-color: rgb(151, 151, 151);
+	/*删除线颜色*/
+	--italic-color: gray;
+	/*斜体颜色*/
+	--strong-color: brown;
+	/*粗体颜色*/
+	--underline-color: #f00;
+	/*下划线颜色*/
+	--ol-color: #81accf;
+	/* 有序列表前缀颜色 */
+	--olfore-color: #fff;
+	/* 有序列表字体颜色 */
+
+	--h-border-color: rgb(255, 191, 191);
+	--h-bg-color: rgb(255, 232, 232);
+	--table-border-color: rgb(255, 235, 211);
+	--th-bg-color: rgb(255, 243, 228);
+	--tr-bg-color: rgb(255, 249, 242);
+	--tr-hover-bg-color: rgb(254, 255, 230);
+	--code-bg-color: rgb(247, 247, 247);
+
+	--selection-bg-color: rgb(235, 227, 255);
+	--block-shadow: 0.15rem 0.15rem 0.5rem rgb(150, 150, 150);
+
+	--focus-color: #ff5d52; /* 点击某些元素（如标题）显示的颜色（偏红） */
+	--ulol-color: #81accf; /* 有序无序列表前缀颜色（灰色） */
+    --olfore-color: #fff; /* 有序列表字体颜色（白色） */
+    --taskborder-color: #81accf; /* 任务列表边框色（红色） */
+    --taskfocus-color: #81accf; /* 任务列表选中填充色（绿色） */
+
+}
+
+html {
+	background-color: #f3f2ee;
+	font-size: 16px;
+}
+
+body {
+	background-color: #f3f2ee;
+}
+
+
+#write {
+	font-family: var(--font--family);
+	max-width: 60rem;
+	padding-left: 2rem;
+	padding-right: 2rem;
+}
+
+/*
+yaml header settings
+*/
+#write pre.md-meta-block {
+	font-family: var(--monospace-font);
+	font-size: 1rem;
+	text-align: left;
+	padding: 0.6rem;
+	color: rgb(134, 134, 134);
+	background-color: var(--code-bg-color);
+	border-radius: 0.4rem;
+}
+
+/*
+headers settings
+标题
+*/
+#write h1 {
+	font-size: 1.75rem;
+	text-align: center;
+	font-family: var(--font--family-h1);
+}
+
+#write h2 {
+	font-size: 1.5rem;
+	border-bottom: 2px solid var(--color--h2--quote);
+	font-family: var(--font--family-h2);
+}
+
+#write h2 span {
+	display: inline-block;
+	font-weight: bold;
+	background: var(--color--h2--quote);
+	color: #ffffff;
+	padding: 3px 10px 1px;
+	border-top-right-radius: 3px;
+	border-top-left-radius: 3px;
+	margin-right: 3px;
+}
+
+#write h2:after {
+	display: inline-block;
+	content: "";
+	vertical-align: bottom;
+	border-bottom: 36px solid #efebe9;
+	border-right: 20px solid transparent;
+}
+
+h3 {
+	font-size: 1.3em;
+	line-height: 1.43;
+	margin: 1.6em auto 1.2em;
+	padding-left: 8px;
+	border-left: 4px solid var(--color--h2--quote);
+}
+
+#write>h3.md-focus {
+	border-color: var(--color--h--focus);
+}
+
+#write h4 {
+	font-size: 1.15rem;
+}
+
+#write h5 {
+	font-size: 1rem;
+}
+
+#write h6 {
+	font-size: 1rem;
+}
+
+/* 标题点击后的前缀提示图标 */
+#write>h3.md-focus:before {
+	width: auto;
+	height: auto;
+	background-color: var(--color--h--focus);
+	color: #ffffff;
+}
+
+#write>h4.md-focus:before {
+	width: auto;
+	height: auto;
+	background-color: #ff5d52;
+	color: #ffffff;
+	margin-top: -1px;
+}
+
+#write h5.md-focus:before,
+#write h6.md-focus:before {
+	margin-top: 6px;
+	color: #ff5d52;
+	font-size: 0.4rem;
+}
+
+/*
+tables settings
+表格
+*/
+#write table {
+	display: table;
+	text-align: left;
+}
+
+#write tbody {
+	border: 0;
+}
+
+#write table tr {
+	border: 0;
+	border-top: 1px solid #ccc;
+	background-color: white;
+}
+
+#write table tr:nth-child(2n) {
+	background-color: #F8F8F8;
+}
+
+#write table tr th,
+#write table tr td {
+	font-size: 16px;
+	border: 1px solid #ccc;
+	padding: 5px 10px;
+	text-align: left;
+}
+
+#write table tr th {
+	font-weight: bold;
+	background-color: #f0f0f0;
+}
+
+/*
+checkboxes settings
+任务列表
+*/
+.md-task-list-item>input {
+    margin-left: -1.3em;
+    margin-top: 0.4rem;
+    -webkit-appearance: none;
+}
+
+/* 任务列表未选中 */
+#write .task-list-item input[type="checkbox"]::before,
+#write input[type="checkbox"]:checked::before {
+	content: "";
+	display: inline-block;
+
+	/*圆形框*/
+	border-radius: 1.1rem;
+
+	/* 方形框 */
+	/* border-radius: 0.1rem; */
+	vertical-align: middle;
+	border: 1.2px solid #81accf;
+	background-color: #ffffff;
+	width: 1.1rem;
+	height: 1.1rem;
+	margin-left: -1px;
+	margin-right: 0.1rem;
+	margin-top: -0.19rem;
+}
+
+/* 任务列表选中 */
+#write .task-list-item input[type="checkbox"]:checked::before {
+	padding-left: 0.125em;
+	padding-top: 0em;
+	content: '✔';
+	color: white;
+	background-color: #81accf;
+	font-size: 0.8rem;
+	line-height: 0.95rem;
+	margin-left: -1px;
+	margin-right: 0.1rem;
+	margin-top: -0.19rem;
+	transition: background-color 200ms ease-in-out;
+}
+
+#write .task-list-item input[type="checkbox"]:checked+p {
+	text-decoration: line-through;
+	color: var(--del-color);
+}
+
+#write input[type='checkbox']:hover::before {
+	transition: all 0.2s;
+	background-color: rgb(228, 228, 228);
+}
+
+/** 有序、无序列表 **/
+/* 有序列表在加入换行后重新计数了，故注释了，待修复 */
+/* #write ol li,
+#write .ol .li, */
+#write ul li,
+#write .ul .li {
+	list-style-type: none;
+}
+
+#write ul>li:not(.tab):before,
+#write .ul>.li:not(.tab):before {
+	margin-left: -18px;
+	margin-top: 7px;
+	width: .62em;
+	height: .62em;
+	border: .1em solid var(--ulol-color);
+
+	border-radius: .31em;
+	background: 0 0;
+	content: '';
+	line-height: .42em;
+}
+
+/* #write ol li:before,
+#write .ol .li:before, */
+#write ul li:before,
+#write .ul .li:before {
+	position: absolute;
+	background: var(--ulol-color);
+	color: var(--olfore-color);
+	cursor: pointer;
+	-webkit-transition: all .3s ease-out;
+	-moz-transition: all .3s ease-out;
+	-o-transition: all .3s ease-out;
+	-ms-transition: all .3s ease-out;
+	transition: all .3s ease-out;
+}
+
+/* #write ol li:first-child,
+#write .ol .li:first-child {
+	counter-reset: li;
+} */
+
+/* #write ol>li:before,
+#write .ol>.li:before {
+	margin-top: 3.8px;
+	margin-left: -21px;
+	width: 1.65em;
+	height: 1.65em;
+	border-radius: 0.825em;
+	content: counter(li);
+	counter-increment: li;
+	text-align: center;
+	font-size: .65em;
+	line-height: 1.7em;
+} */
+
+/* 列表子项上下间隔调整 */
+/* #write ol li *,
+#write .ol .li *  */
+#write ul li *,
+#write .ul .li * {
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+/* 列表上下间隔调整 */
+
+/* #write ol li,
+#write .ol .li, */
+#write ul li,
+#write .ul .li {
+	margin-top: 7px;
+	margin-bottom: 7px;
+}
+
+
+/*
+blockquotes settings
+引用
+*/
+#write blockquote {
+	color: #7e7a7a;
+	border-left: 0.25rem solid var(--color--h2--quote);
+	background: var(--color--quote--backgroudn);
+	padding: 0.25rem 0.5rem;
+	border-radius: 0.25rem;
+}
+
+/* 引用中的彩虹 */
+#write blockquote::before {
+	display: block;
+	height: 2rem;
+	width: 1.5rem;
+	content: "🌈";
+	font-size: 1.2rem;
+}
+
+/* 引用内单行代码 */
+#write blockquote code {
+	background-color: transparent;
+}
+
+/*
+horizontal rules settings
+*/
+#write hr {
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+	background-color: rgb(226, 226, 226);
+	height: 0.13rem;
+	border: 0;
+}
+
+
+/*
+code blocks settings
+代码块
+*/
+#write .md-fences {
+	font-family: var(--monospace-font);
+	font-size: 1rem;
+	padding: 0.6rem;
+	background-color: var(--code-bg-color);
+	border-radius: 0.4rem;
+	box-shadow: var(--block-shadow);
+}
+
+#write .cm-s-inner .CodeMirror-gutters {
+	border: none;
+}
+
+#write .cm-s-inner .CodeMirror-linenumber {
+	color: rgb(212, 212, 212);
+}
+
+#write .cm-s-inner .cm-keyword {
+	color: rgb(204, 35, 35);
+}
+
+#write .cm-s-inner .cm-number {
+	color: rgb(27, 57, 226);
+}
+
+#write .cm-s-inner .cm-def {
+	color: rgb(146, 50, 255);
+}
+
+#write .cm-s-inner .cm-operator {
+	color: rgb(204, 35, 35);
+}
+
+#write .cm-s-inner .cm-variable2 {
+	color: rgb(38, 129, 219);
+}
+
+#write .cm-s-inner .cm-variable3 {
+	color: rgb(204, 35, 35);
+}
+
+#write .cm-s-inner .cm-comment {
+	color: rgb(18, 129, 18);
+}
+
+#write .cm-s-inner .cm-string {
+	color: rgb(18, 129, 18);
+}
+
+#write .cm-s-inner .cm-builtin {
+	color: rgb(218, 135, 12);
+}
+
+#write .cm-tag {
+	color: rgb(139, 10, 10);
+}
+
+/*
+formulas settings
+*/
+#write mjx-container {
+	font-size: 1.1rem;
+}
+
+/*
+tooltips settings
+*/
+#write .code-tooltip {
+	box-shadow: 0.1rem 0.1rem 0.2rem rgb(150, 150, 150);
+	border-radius: 0.2rem;
+	margin-top: 0.3rem;
+}
+
+/*
+selected texts in code blocks settings
+*/
+#write .CodeMirror-selected,
+#write .CodeMirror-selectedtext,
+#write .in-text-selection {
+	background-color: var(--selection-bg-color) !important;
+}
+/*
+selected texts settings
+文本选中后的颜色
+*/
+#write ::selection {
+	background-color: var(--selection-bg-color);
+}
+
+/*
+diagrams settings
+*/
+#write pre[lang=’sequence’],
+#write pre[lang=’flow’],
+#write pre[lang=’mermaid’] {
+	background-color: var(--code-bg-color);
+	border-radius: 0.4rem;
+	box-shadow: var(--block-shadow);
+}
+
+/*
+inline codes settings
+行内代码
+*/
+#write code {
+	font-family: var(--monospace-font);
+	padding: 0.05rem 0.12rem;
+	color: var(--color--inlinecode--font);
+	background-color: var(--color--inlinecode--background);
+	border-radius: 0.4rem;
+}
+
+/*
+urls settings
+超链接
+*/
+#write a {
+	color: var(--color--url);
+	text-decoration: none;
+}
+
+#write a:hover {
+	border-radius: 6px;
+	border-bottom: 2px solid transparent;
+	background-color: var(--color--url--focus);
+	color: var(--color--url--focus--font) !important;
+	cursor: pointer;
+	padding: 2.5px 2.5px;
+	font-size: 1rem;
+}
+
+/*
+images settings
+图像
+*/
+#write img {
+	display: block;
+	margin: 0 auto;
+	border: 0;
+	border-radius: 12px;
+	box-shadow: var(--block-shadow);
+	margin-bottom: 4px;
+}
+
+/*
+deletes settings
+删除线
+*/
+#write del {
+	color: var(--del-color);
+}
+
+
+kbd {
+	background-color: rgb(255, 255, 255);
+	border-radius: 8px;
+	color: black;
+	padding: 1px 4px;
+	font-family: "微软雅黑";
+	font-size: 0.8rem;
+	border-top: 1px solid #cfcfcf;
+	border-left: 1px solid #cfcfcf;
+	border-right: 1px solid #cfcfcf;
+	border-bottom: 3px solid #cfcfcf;
+}
+
+/* 斜体 */
+em {
+	font-style: normal;
+	color: var(--italic-color);
+}
+
+/* 粗体 */
+strong {
+	background-color: inherit;
+	color: var(--strong-color);
+}
+
+/* 下划线 */
+u {
+	background-color: inherit;
+	color: inherit;
+	text-decoration: none;
+	border-bottom: 2px solid var(--underline-color);
+	padding-bottom: 1px;
+}
+
+/* 高亮 */
+mark {
+	color: black;
+	font-weight: normal;
+	padding: 1px 5px 2px;
+	border-radius: 2px;
+	background-color: var(--color--highlight) !important;
+}
+
+/* sidebar	侧边栏 */
+#typora-sidebar {
+	background-color: #f3f2ee;
+	/* 分割线 */
+	border-right: 1px dashed #C0C0C0;
+}
+
+#typora-sidebar #sidebar-loading-template.file-list-item {
+	border-bottom: transparent !important;
+	background-color: rgba(171, 192, 208, 0.1);
+}
+
+#typora-sidebar .info-panel-tab-wrapper .info-panel-tab:hover {
+	color: inherit;
+}
+
+#typora-sidebar .info-panel-tab-wrapper .info-panel-tab .info-panel-tab-border {
+	background-color: #2f845e;
+	border-radius: 4px;
+}
+
+#typora-sidebar .sidebar-osx-tab .sidebar-tabs {
+	border-bottom-color: transparent;
+}
+
+#typora-sidebar #sidebar-content .file-list-item {
+	border-bottom: 1px solid #eee;
+}
+
+#typora-sidebar #sidebar-content .file-list-item.active {
+	background-color: rgba(66, 185, 131, 0.1);
+	border-left: 4px solid #2f845e;
+}
+
+#typora-sidebar #sidebar-content .ty-sidebar-search-panel {
+	border-bottom: 1px solid #eee;
+}
+
+#typora-sidebar #sidebar-content .ty-sidebar-search-panel .searchpanel-search-option-btn {
+	background-color: #fff;
+}
+
+#typora-sidebar #sidebar-content .sidebar-content-content .file-node-content {
+	line-height: 1.375rem;
+	font-size: 1rem;
+	color: #282c34 !important;
+}
+
+#typora-sidebar #sidebar-content .sidebar-content-content .file-tree-node:not(.file-node-root):hover>.file-node-background {
+	border-left: 4px solid #2f845e;
+	background-color: rgba(66, 185, 131, 0.1);
+}
+
+#typora-sidebar #sidebar-content .sidebar-content-content .file-tree-node.active>.file-node-background {
+	border-color: #2f845e;
+	background-color: rgba(66, 185, 131, 0.1);
+}
+
+#typora-sidebar #sidebar-content .sidebar-content-content #file-library-list-children .file-library-file-node:hover {
+	border-left: 4px solid #2f845e;
+	background-color: rgba(66, 185, 131, 0.1);
+}
+
+#typora-sidebar #sidebar-content #outline-content .no-collapse-outline .outline-item {
+	line-height: 1.375rem;
+	font-size: 1rem;
+}
+
+#typora-sidebar #sidebar-content #outline-content .outline-expander:before {
+	color: inherit;
+	font-size: 14px;
+	top: auto;
+	content: "\f0da";
+	font-family: FontAwesome;
+}
+
+#typora-sidebar #sidebar-content #outline-content .outline-expander:hover:before,
+#typora-sidebar #sidebar-content #outline-content .outline-item-open>.outline-item>.outline-expander:before {
+	content: "\f0d7";
+}
+
+#typora-sidebar #sidebar-content #outline-content .outline-item:hover {
+	background-color: #bac6e9 !important;
+}
+
+#typora-sidebar #ty-sidebar-footer {
+	border-top: 1px solid #eee;
+}
+
+#typora-sidebar #ty-sidebar-footer .sidebar-footer-item:hover {
+	background-color: #bac6e9 !important;
+}
+
+#typora-sidebar #ty-sidebar-footer #sidebar-files-menu {
+	-webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+
+/* mac 风格 */
+#write pre.md-fences {
+	padding: 1rem 0.5rem 1rem;
+	display: block;
+	-webkit-overflow-scrolling: touch;
+	/* box-shadow: 0 0 6px 2px rgba(151, 151, 151, 0.9); */
+	/* border-top: rgb(51, 51, 51) solid 24px; */
+	border-top: rgb(244, 244, 244) solid 24px;
+	background-color: rgb(244, 244, 244);
+}
+
+pre.md-fences::before {
+	content: '';
+	background: #fc625d;
+	box-shadow: 23px 0 #fdbc40, 45px 0 #35cd4b;
+	border-radius: 50%;
+	margin-top: -1.73rem;
+	position: absolute;
+	left: 15px;
+	height: 12px;
+	width: 12px;
+}
+
+
+/** 图片 **/
+
+/* 图片自动编号 */
+#write {
+    counter-reset: imgNum;
+}
+
+#write p>.md-image:after {
+    counter-increment: imgNum;
+    content: "图 " counter(imgNum) attr(alt) !important;
+    text-align: center;
+    width: 100%;
+    display: inline-block;
+    margin-top: 8px !important;
+    font-size: small;
+	font-family:"华康手札体W5P";
+    font-size:1rem;
+	color:gray;
+}
+
+
+</style><title>README</title>
+</head>
+<body class='typora-export os-windows'><div class='typora-export-content'>
+<div id='write'  class=''><h1 id='理工轻食'><span>理工轻食</span></h1><h2 id='一后台系统'><span>一、后台系统</span></h2><ol start='' ><li><p><span>Idea拉取项目</span></p></li><li><p><span>刷新Maven依赖，等待下载完成</span></p></li><li><p><span>修改LGQS-db的application-db.yml中的数据库的地址和密码</span></p></li><li><p><span>新建数据库lgqs，导入执行LGQS-db的resources目录下的lgqs.sql脚本</span></p></li><li><p><span>启动LGQS-all的Application启动类</span></p></li><li><p><span>启动成功后，访问</span><a href='http://localhost:8080/wx/index/index' target='_blank' class='url'>http://localhost:8080/wx/index/index</a><span>，出现下列数据则完全启动成功</span></p><pre class="md-fences md-end-block md-fences-with-lineno ty-contain-cm modeLoaded" spellcheck="false" lang="json"><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="json"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 10.8px; left: 33px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 29px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre><div class="CodeMirror-linenumber CodeMirror-gutter-elt"><div>5</div></div></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: -29px; width: 29px;"></div><div class="CodeMirror-gutter-wrapper CodeMirror-activeline-gutter" style="left: -29px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt CodeMirror-linenumber-show" style="left: 0px; width: 21px;">1</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">{</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -29px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">2</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-string cm-property">"errno"</span>:<span class="cm-number">0</span>,</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -29px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">3</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-string cm-property">"data"</span>:<span class="cm-string">"hello world, this is wx service"</span>,</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -29px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">4</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-string cm-property">"errmsg"</span>:<span class="cm-string">"成功"</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -29px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt CodeMirror-linenumber-show" style="left: 0px; width: 21px;">5</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">}</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 128px;"></div><div class="CodeMirror-gutters" style="height: 128px;"><div class="CodeMirror-gutter CodeMirror-linenumbers" style="width: 29px;"></div></div></div></div></pre><p><span>访问</span><a href='http://localhost:8080/admin/index/index' target='_blank' class='url'>http://localhost:8080/admin/index/index</a></p><pre class="md-fences md-end-block md-fences-with-lineno ty-contain-cm modeLoaded" spellcheck="false" lang="json"><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="json"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 10.8px; left: 33px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 29px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre><div class="CodeMirror-linenumber CodeMirror-gutter-elt"><div>5</div></div></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: -29px; width: 29px;"></div><div class="CodeMirror-gutter-wrapper CodeMirror-activeline-gutter" style="left: -29px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt CodeMirror-linenumber-show" style="left: 0px; width: 21px;">1</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">{</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -29px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">2</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-string cm-property">"errno"</span>:<span class="cm-number">0</span>,</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -29px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">3</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-string cm-property">"data"</span>:<span class="cm-string">"hello world, this is admin service"</span>,</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -29px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">4</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-string cm-property">"errmsg"</span>:<span class="cm-string">"成功"</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -29px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt CodeMirror-linenumber-show" style="left: 0px; width: 21px;">5</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">}</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 128px;"></div><div class="CodeMirror-gutters" style="height: 128px;"><div class="CodeMirror-gutter CodeMirror-linenumbers" style="width: 29px;"></div></div></div></div></pre></li></ol><h2 id='二管理后台'><span>二、管理后台</span></h2><ol start='' ><li><p><span>安装node.js环境，配置环境变量，自行查找资料配置</span></p></li><li><p><span>终端进入Page\LGQS-admin目录下，依次执行指令</span></p><pre class="md-fences md-end-block md-fences-with-lineno ty-contain-cm modeLoaded" spellcheck="false" lang="sh"><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="sh"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 10.8px; left: 33px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 29px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre><div class="CodeMirror-linenumber CodeMirror-gutter-elt"><div>3</div></div></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: -29px; width: 29px;"></div><div class="CodeMirror-gutter-wrapper CodeMirror-activeline-gutter" style="left: -29px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt CodeMirror-linenumber-show" style="left: 0px; width: 21px;">1</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-builtin">cd</span> Page/LGQS-admin</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -29px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">2</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-builtin">npm</span> install</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -29px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt CodeMirror-linenumber-show" style="left: 0px; width: 21px;">3</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-builtin">npm</span> run dev</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 77px;"></div><div class="CodeMirror-gutters" style="height: 77px;"><div class="CodeMirror-gutter CodeMirror-linenumbers" style="width: 29px;"></div></div></div></div></pre><p><span>等待管理后台启动，首次启动会比较慢</span></p></li></ol><h2 id='三小程序前台'><span>三、小程序前台</span></h2><ol start='' ><li><p><span>下载并安装微信开发者工具</span></p></li><li><p><span>导入项目，AppID不要选默认的，选择测试号，或者自己提前注册一个AppID，不使用云开发</span></p><p><img src="https://raw.githubusercontent.com/Curi-T/picture/main/typora/image-20220707001714178.png" alt="image-20220707001714178" style="zoom: 67%;" /></p></li><li><p><span>导入完成后，打开config目录下的api.js文件，将第一行改为</span></p><pre class="md-fences md-end-block md-fences-with-lineno ty-contain-cm modeLoaded" spellcheck="false" lang="js"><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="js"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 10.8px; left: 33px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 29px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre><div class="CodeMirror-linenumber CodeMirror-gutter-elt"><div>1</div></div></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: -29px; width: 29px;"></div><div class="CodeMirror-gutter-wrapper CodeMirror-activeline-gutter" style="left: -29px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt CodeMirror-linenumber-show" style="left: 0px; width: 21px;">1</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">var</span> <span class="cm-def">WxApiRoot</span> <span class="cm-operator">=</span> <span class="cm-string">'http://localhost:8080/wx/'</span>;</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 26px;"></div><div class="CodeMirror-gutters" style="height: 26px;"><div class="CodeMirror-gutter CodeMirror-linenumbers" style="width: 29px;"></div></div></div></div></pre></li><li><p><span>点击上方编译，编译完成后即可显示大致框架</span></p></li></ol><h2 id='四新增数据'><span>四、新增数据</span></h2><ol><li><span>通过第二步打开的管理后台，首先新增餐品一级类目</span></li><li><span>然后在此一级类目下新增二级类目</span></li><li><span>之后新增餐品，输入合理数据即可新增成</span></li><li><span>去往微信小程序点击刷新后即可查看新增餐品数据</span></li></ol><p>&nbsp;</p></div></div>
+</body>
+</html>

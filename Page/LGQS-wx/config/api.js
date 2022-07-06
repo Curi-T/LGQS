@@ -1,9 +1,5 @@
-
-// var WxApiRoot = 'http://localhost:8080/wx/';
+var WxApiRoot = 'http://localhost:8080/wx/';
 // var WxApiRoot = 'http://192.168.43.185:8080/wx/';
-var WxApiRoot = 'http://8.130.106.250:8080/wx/';
-// var WxApiRoot = 'http://lgqs.rhse.xyz:8080/wx/';
-
 
 module.exports = {
   IndexUrl: WxApiRoot + 'home/index', //首页数据接口
