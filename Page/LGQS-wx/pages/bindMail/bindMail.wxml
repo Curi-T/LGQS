@@ -1,0 +1,25 @@
+<view class="container">
+  <view wx:if="{{!completed}}">
+    <view class='toast-box'>
+      <view class='toastbg'></view>
+      <view class='showToast'>
+        <view class='toast-title'>
+          <text>确认底金?</text>
+        </view>
+        <view class='toast-main'>
+          <view class='toast-input'>
+            <input type='number' placeholder='请输入符合您的保底金额~' focus="true" bindinput='getUserInput'></input>
+          </view>
+        </view>
+        <view class='toast-button'>
+          <view class='cancel'>
+            <button bindtap="cancelSelected">取消</button>
+          </view>
+          <view class='success'>
+            <button bindtap="successSelected">确定</button>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

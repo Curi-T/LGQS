@@ -1,0 +1,19 @@
+spring:
+  profiles:
+    active: db, core, admin
+  messages:
+    encoding: UTF-8
+
+server:
+  port: 8083
+
+logging:
+  level:
+    root:  ERROR
+    org.springframework:  ERROR
+    org.mybatis:  ERROR
+    cn.cqut.lgqs.admin:  DEBUG
+    cn.cqut.lgqs:  ERROR
+
+swagger:
+  production: false

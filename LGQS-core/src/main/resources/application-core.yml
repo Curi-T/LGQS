@@ -1,0 +1,53 @@
+lgqs:
+  # 开发者应该设置成自己的wx相关信息
+  wx:
+    app-id: xxx
+    app-secret: xxx
+    mch-id: 11111111
+    mch-key: xxxxxxxx
+    notify-url: http://www.example.com/wx/order/pay-notify
+    # 消息推送配置token
+    token:
+    # 消息推送配置AesKey
+    aes-key:
+
+  #通知相关配置
+  notify:
+    mail:
+      # 邮件通知配置,邮箱一般用于接收业务通知例如收到新的订单，sendto 定义邮件接收者，通常为餐厅运营人员
+      enable: true
+      host: smtp.qq.com
+      username: 1426693956@qq.com
+      password: xxx
+      sendfrom: 1426693956@qq.com
+      sendto: 1426693910@qq.com
+      port: 465
+
+  # 对象存储配置
+  storage:
+    # 当前工作的对象存储模式，分别是local、aliyun、tencent、qiniu
+    active: aliyun
+    # 本地对象存储配置信息
+    local:
+      storagePath: storage
+      # 这个地方应该是wx模块的WxStorageController的fetch方法对应的地址
+      address: http://localhost:8080/wx/storage/fetch/
+    # 阿里云对象存储配置信息
+    aliyun:
+      endpoint: xxx
+      accessKeyId: xxx
+      accessKeySecret: xxx
+      bucketName: xxx
+    # 腾讯对象存储配置信息
+    # 请参考 https://cloud.tencent.com/document/product/436/6249
+    tencent:
+      secretId: xxx
+      secretKey: xxx
+      region: xxx
+      bucketName: xxx
+    # 七牛云对象存储配置信息
+    qiniu:
+      endpoint: xxx
+      accessKey: xxx
+      secretKey: xxx
+      bucketName: xxx

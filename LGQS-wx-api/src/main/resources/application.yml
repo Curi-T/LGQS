@@ -1,0 +1,22 @@
+spring:
+  profiles:
+    active: db, core, wx
+  messages:
+    encoding: UTF-8
+
+server:
+  port: 8082
+
+logging:
+  level:
+    root:  ERROR
+    org.springframework:  ERROR
+    org.mybatis:  ERROR
+    cn:
+      cqut:
+        lgqs:
+    cn.cqut.lgqs.wx:  DEBUG
+    cn.cqut.lgqs:  ERROR
+
+swagger:
+  production: false

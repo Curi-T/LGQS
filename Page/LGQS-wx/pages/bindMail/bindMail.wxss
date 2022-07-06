@@ -1,0 +1,82 @@
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #101419;
+}
+
+.toast-box {
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+}
+
+
+.toastbg {
+  opacity: 0.2;
+  background-color: black;
+  position: absolute;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.showToast {
+  position: absolute;
+  opacity: 1;
+  width: 70%;
+  margin-left: 15%;
+  margin-top: 40%;
+}
+
+.toast-title {
+  padding-left: 5%;
+  background-color: #2196f3;
+  color: white;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  border-top-right-radius: 16rpx;
+  border-top-left-radius: 16rpx;
+}
+
+.toast-main {
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  background-color: white;
+  text-align: center;
+}
+
+.toast-input {
+  margin-left: 5%;
+  margin-right: 5%;
+  border: 1px solid #ddd;
+  padding-left: 2vh;
+  padding-right: 2vh;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+}
+
+.toast-button {
+  display: flex;
+}
+
+.cancel, .success {
+  width: 50%;
+}
+
+.cancel button {
+  color: #999;
+  width: 100%;
+  background-color: white;
+  border-radius: 0px;
+  border-bottom-left-radius: 16rpx;
+}
+
+.success button {
+  color: #1d2228;
+  width: 100%;
+  background-color: white;
+  border-radius: 0px;
+  border-bottom-right-radius: 16rpx;
+}
